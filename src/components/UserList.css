@@ -1,0 +1,63 @@
+/* UserList.css */
+.user-screen {
+  /* display: flex;
+  
+  justify-content: center; */
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #232a4c, #0f5a7f);
+}
+
+.user-list {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f8f9fa; /* Light background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+  }
+  
+  .user-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #dee2e6; /* Light border color */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight box shadow */
+    transition: transform 0.3s;
+  }
+  
+  .user-item:hover {
+    transform: scale(1.05); /* Scale on hover */
+  }
+  
+  .user-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight box shadow */
+  }
+  
+  .user-details {
+    flex-grow: 1;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40; /* Dark text color */
+  }
+  
+  h3 {
+    margin-bottom: 5px;
+    color: #007bff; /* Primary color for name */
+  }
+  
+  p {
+    margin: 5px 0;
+    color: #495057; /* Text color */
+  }
+  

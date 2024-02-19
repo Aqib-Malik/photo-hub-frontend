@@ -1,0 +1,11 @@
+
+.login-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #232a4c, #0f5a7f);
+  
+       
+  }
+  

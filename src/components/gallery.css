@@ -1,0 +1,170 @@
+/* gallery.css */
+
+/* html, body {
+    background-color: #b2bcc6;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} */
+
+.gallery-section {
+    
+  /* background: -webkit-linear-gradient(to bottom right, rgb(224, 250, 252), rgb(199, 254, 249)); */
+  background: linear-gradient(to bottom right, #f2f2f2, #cdeeff);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* padding: 50px 0; */
+  /* height: 100%; */
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.card-img-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  transition: opacity 0.3s;
+}
+
+.card:hover .overlay-content {
+  opacity: 1;
+}
+
+.overlay-content h5 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 40px;
+  right: 10px;
+  transform: translateY(50%);
+}
+
+.btn-download {
+  background-color: #a1aba8;
+  color: #535151;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  font-size: 1.1rem;
+  border: 2px solid #fff;
+}
+
+.btn-download:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+.image-container {
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  transform: translateY(50%);
+}
+
+.img_user {
+  background-color: #a1aba8;
+  color: #535151;
+  /* padding: 4px; */
+  text-decoration: none;
+  border-radius: 50%; /* Set the border-radius to 50% for full rounding */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  font-size: 1.1rem;
+  border: 2px solid #fff;
+  width: 40px; /* Set the width and height to the same value for a circular shape */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-user:hover {
+  background-color: #fff;
+  color: #000;
+  border-color: #000;
+}
+
+.user-name {
+  color: #ffffff;
+  position: absolute;
+  bottom: 22px;
+  left: 50px;
+  width: 100px;
+  height: 30px;
+  transition: color 0.3s;
+}
+
+.user-image-container:hover .user-name {
+  color: #fff; /* Change color on hover */
+}
+.photographer-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  background-color: #ff8c00; /* Choose a color that complements your design */
+  color: #fff;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+
+.rating {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+ 
+  z-index: 2;
+}
