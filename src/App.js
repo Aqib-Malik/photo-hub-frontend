@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 // import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Counter from './components/counter';
 import NavBar from './components/NavBar';
 import Add_record from './components/add_record';
@@ -12,6 +12,7 @@ import UploadScreen from './components/upload_photo';
 import UserList from './components/UserList';
 import Home from './components/Home';
 import Category from './components/categories';
+import AllPhotos from './components/allPhts';
 import {
   BrowserRouter as Router,
   Routes,
@@ -37,6 +38,7 @@ class App extends Component {
       <Routes>
         
       <Route path='/cat' element={localStorage.getItem('token')==null?<Category/>:<Category/>}/>
+      <Route path='/allphotos' element={localStorage.getItem('token')==null?<AllPhotos/>:<AllPhotos/>}/>
       {localStorage.getItem('token')==null?
         <Route path='/' element={<Login/>}/>
                     
@@ -49,7 +51,7 @@ class App extends Component {
         <Route path='/gallery' element={localStorage.getItem('token')==null?<Login/>:<Gallery/>}/>
         <Route path='/uploadphoto' element={localStorage.getItem('token')==null?<Login/>:<UploadScreen/>}/>
         <Route path='/userlist' element={localStorage.getItem('token')==null?<Login/>:<UserList/>}/>
-        <Route path='/home' element={localStorage.getItem('token')==null?<Login/>:<Home/>}/>
+        <Route path='/home' element={localStorage.getItem('token')==null?<Home/>:<Home/>}/>
         <Route path='/cat' element={localStorage.getItem('token')==null?<Category/>:<Category/>}/>
         
       </Routes>

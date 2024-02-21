@@ -139,7 +139,7 @@ class NavBar extends Component {
   render() {
     return (
       <>
-        {localStorage.getItem('token') != null ? (
+        {/* {localStorage.getItem('token') != null ? ( */}
           <Navbar bg="dark " variant="dark" expand="lg">
             <Container fluid>
               <Navbar.Brand href="#">
@@ -170,6 +170,11 @@ class NavBar extends Component {
                       Users
                     </Link>
                   </Nav.Link>
+                  <Nav.Link>
+                    <Link to="cat" style={{ color: 'white', textDecoration: 'none' }}>
+                      Category
+                    </Link>
+                  </Nav.Link>
                   <Button variant="outline-warning">
                     <Link to="new" style={{ color: 'white', textDecoration: 'none' }}>
                       Become a PhotoGrapher
@@ -183,9 +188,9 @@ class NavBar extends Component {
               </Navbar.Collapse>
             </Container>
           </Navbar>
-        ) : (
+        {/* ) : (
           <div></div>
-        )}
+        )} */}
       </>
     );
   }
