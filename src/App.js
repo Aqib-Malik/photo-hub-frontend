@@ -11,6 +11,7 @@ import Gallery from './components/gallery';
 import UploadScreen from './components/upload_photo';
 import UserList from './components/UserList';
 import Home from './components/Home';
+import Category from './components/categories';
 import {
   BrowserRouter as Router,
   Routes,
@@ -34,8 +35,11 @@ class App extends Component {
        <BrowserRouter>
     <NavBar/>
       <Routes>
+        
+      <Route path='/cat' element={localStorage.getItem('token')==null?<Category/>:<Category/>}/>
       {localStorage.getItem('token')==null?
-        <Route path='/' element={<Login/>}/>            
+        <Route path='/' element={<Login/>}/>
+                    
                  :               
         <Route path='/' element={localStorage.getItem('token')==null?<Login/>:<Gallery/>}/>}
         <Route path='/new' element={localStorage.getItem('token')==null?<Login/>:<Add_record/>}/>
@@ -46,6 +50,7 @@ class App extends Component {
         <Route path='/uploadphoto' element={localStorage.getItem('token')==null?<Login/>:<UploadScreen/>}/>
         <Route path='/userlist' element={localStorage.getItem('token')==null?<Login/>:<UserList/>}/>
         <Route path='/home' element={localStorage.getItem('token')==null?<Login/>:<Home/>}/>
+        <Route path='/cat' element={localStorage.getItem('token')==null?<Category/>:<Category/>}/>
         
       </Routes>
     </BrowserRouter>
