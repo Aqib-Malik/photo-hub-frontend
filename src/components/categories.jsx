@@ -36,7 +36,7 @@ const Category = () => {
       <div>
         <div class="page-heading">
     <div class="container">
-      <div class="row">
+      <div class="row"> 
         <div class="col-lg-8 offset-lg-2 header-text">
           <h2>Categories <em>Photo Hub</em></h2>
           <p>Explore Photgraphy</p>
@@ -46,59 +46,20 @@ const Category = () => {
   </div>
   <div class="top-categories">
     <div class="container">
-      <div class="row">
-        <div class="col-lg col-sm-4">
-          <div class="item">
-            <div class="icon">
-              <img src="assets/images/icon-01.png" alt=""/>
-            </div>
-            <h4>Nature Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">128</span>
-          </div>
+    <div class="row">
+  {categories.map((image, index) => (
+    <div class="col-lg-3 col-sm-4">
+      <div class={"item" + ( " mt-4" )}>
+        <div class="icon">
+          <img src="assets/images/icon-01.png" alt=""/>
         </div>
-        <div class="col-lg col-sm-4">
-          <div class="item">
-            <div class="icon">
-              <img src="assets/images/icon-02.png" alt=""/>
-            </div>
-            <h4>Space Contest</h4>
-            <span>Available Contests</span>
-            <span class="counter">224</span>
-          </div>
-        </div>
-        <div class="col-lg col-sm-4">
-          <div class="item">
-            <div class="icon">
-              <img src="assets/images/icon-03.png" alt=""/>
-            </div>
-            <h4>Portrait Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">145</span>
-          </div>
-        </div>
-        <div class="col-lg col-sm-4">
-          <div class="item">
-            <div class="icon">
-              <img src="assets/images/icon-04.png" alt=""/>
-            </div>
-            <h4>Nature Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">268</span>
-          </div>
-        </div>
-        <div class="col-lg col-sm-4">
-          <div class="item">
-            <div class="icon">
-              <img src="assets/images/icon-01.png" alt=""/>
-            </div>
-            <h4>Space Picture</h4>
-            <span>Available Contests</span>
-            <span class="counter">310</span>
-          </div>
-        </div>
-        
+        <h4>{image.category_name}</h4>
+        <span>Photo Hub</span>
+        <span class="counter">{image.id}</span>
       </div>
+    </div>
+  ))}
+</div>
     </div>
   </div>
   

@@ -6,7 +6,7 @@
     justify-content: center;
     height: 100vh;
        /* Chrome 10-25, Safari 5.1-6 */
-     background: linear-gradient(to bottom right, #232a4c, #0f5a7f);
+     background: #00bdfe;
     
        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
        /* background: linear-gradient(to bottom right, rgb(144, 184, 212), rgb(50, 108, 119)) */

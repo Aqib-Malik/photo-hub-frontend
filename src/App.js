@@ -13,6 +13,7 @@ import UserList from './components/UserList';
 import Home from './components/Home';
 import Category from './components/categories';
 import AllPhotos from './components/allPhts';
+import Confirm from './components/confirm';
 import {
   BrowserRouter as Router,
   Routes,
@@ -39,11 +40,12 @@ class App extends Component {
         
       <Route path='/cat' element={localStorage.getItem('token')==null?<Category/>:<Category/>}/>
       <Route path='/allphotos' element={localStorage.getItem('token')==null?<AllPhotos/>:<AllPhotos/>}/>
+      <Route path='/confirm' element={localStorage.getItem('token')==null?<Confirm/>:<Confirm/>}/>
       {localStorage.getItem('token')==null?
         <Route path='/' element={<Login/>}/>
                     
                  :               
-        <Route path='/' element={localStorage.getItem('token')==null?<Login/>:<Gallery/>}/>}
+        <Route path='/' element={localStorage.getItem('token')==null?<Login/>:<Home/>}/>}
         <Route path='/new' element={localStorage.getItem('token')==null?<Login/>:<Add_record/>}/>
         <Route path='/update' element={localStorage.getItem('token')==null?<Login/>:<Uptadedata/>}/>
         <Route path='/signup' element={<Signup/>}/>

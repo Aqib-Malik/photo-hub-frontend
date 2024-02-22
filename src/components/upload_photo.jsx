@@ -25,6 +25,7 @@ const UploadScreen = () => {
     try {
       const response = await axios.get('http://localhost:3001/images/getcategories');
       setCategories(response.data);
+      console.log(response.data)
     } catch (error) {
       console.error('Error fetching categories:', error);
     }
@@ -32,7 +33,10 @@ const UploadScreen = () => {
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
+    console.log(e.target.value);
+    console.log(selectedCategory);
   };
+
 
   const onDrop = (acceptedFiles) => {
     const file = acceptedFiles[0];
@@ -49,14 +53,17 @@ const UploadScreen = () => {
         const snapshot = await uploadBytes(storageRef, uploadedImage);
         const downloadURL = await getDownloadURL(snapshot.ref);
 
+        console.log(selectedCategory)
+
         // Make a POST request to your Node.js backend to store image details
         await axios.post('http://localhost:3001/images', {
           title,
           description,
           rating:5.0,
           image: downloadURL,
+          category_id:selectedCategory,
           userId:localStorage.getItem('user_id'),
-          category_id:selectedCategory.id
+          
         });
 
         setTitle('');

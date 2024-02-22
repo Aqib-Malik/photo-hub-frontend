@@ -1478,14 +1478,14 @@ page heading
 */
 
 .page-heading {
-  background-image: url(../images/heading-bg.jpg);
+  background-image: url(../images/bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 130px;
   text-align: center;
-  background-color: #2a2a2a;
+  background-color: rgba(0, 0, 0, 0.5); /* Change the last value (0.5) to adjust the darkness */
 }
 
 .page-heading h2 {
